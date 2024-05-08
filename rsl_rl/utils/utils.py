@@ -106,3 +106,15 @@ def squeeze_preserve_batch(tensor):
         squeezed_tensor = squeezed_tensor.unsqueeze(0)
 
     return squeezed_tensor
+
+def get_probabilistic_num_min(num_mins):
+    # allows the number of min to be a float
+    floored_num_mins = np.floor(num_mins)
+    if num_mins - floored_num_mins > 0.001:
+        prob_for_higher_value = num_mins - floored_num_mins
+        if np.random.uniform(0, 1) < prob_for_higher_value:
+            return int(floored_num_mins+1)
+        else:
+            return int(floored_num_mins)
+    else:
+        return num_mins

@@ -247,7 +247,8 @@ class SAC(AbstractActorCritic):
     def _scale_actions(self, actions: torch.Tensor, intermediate=False) -> torch.Tensor:
         actions = actions.reshape(-1, self._action_size)
         action_normalized = torch.tanh(actions)
-        action_scaled = super()._process_actions(action_normalized * self._action_delta + self._action_offset)
+        # action_scaled = super()._process_actions(action_normalized * self._action_delta + self._action_offset)
+        action_scaled = super()._process_actions(actions)
 
         if intermediate:
             return action_normalized, action_scaled
