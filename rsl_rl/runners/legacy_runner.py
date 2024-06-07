@@ -33,6 +33,7 @@ class LeggedGymRunner(Runner):
         ("clip_param", "clip_ratio"),
         ("desired_kl", "target_kl"),
         ("entropy_coef", "entropy_coeff"),
+        ("clone_coef", "clone_coeff"),
         ("lam", "gae_lambda"),
         ("max_grad_norm", "gradient_clip"),
         ("num_learning_epochs", None),

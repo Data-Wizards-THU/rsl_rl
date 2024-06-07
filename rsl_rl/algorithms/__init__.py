@@ -6,5 +6,6 @@ from .dsac import DSAC
 from .ppo import PPO
 from .sac import SAC
 from .td3 import TD3
+from .ppg import PPG
 
-__all__ = ["Agent", "DDPG", "D4PG", "DPPO", "DSAC", "PPO", "SAC", "TD3"]
+__all__ = ["Agent", "DDPG", "D4PG", "DPPO", "DSAC", "PPO", "SAC", "TD3", "PPG"]
