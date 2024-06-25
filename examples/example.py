@@ -6,7 +6,7 @@ from rsl_rl.runners.runner import Runner
 from hyperparams import hyperparams
 
 
-ALGORITHM = DPPO
+ALGORITHM = SAC
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 TASK = "BipedalWalker-v3"
 
